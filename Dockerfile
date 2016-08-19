@@ -7,5 +7,6 @@ RUN echo deb http://apt.dockerproject.org/repo debian-jessie main > /etc/apt/sou
         && apt-get update -yqq \
         && apt-get install -yqq docker-engine \
         && rm -rf /var/lib/apt/lists/* \
-        && useradd -aG docker jenkins
+        && usermod -aG docker jenkins
+
 USER jenkins
